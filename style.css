@@ -19,6 +19,9 @@ body {
   height: 100vh;
   margin: auto;
   max-width: 62rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -30,7 +33,7 @@ header {
 }
 
 .game {
-  height: 80%;
+  height: 100%;
 }
 
 .result {
