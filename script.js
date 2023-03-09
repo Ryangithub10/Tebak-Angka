@@ -25,18 +25,18 @@ const compareNumber = (choiceNumber, comparator) => {
   const SMALL_AND_BIG = IS_NUMBER_LOWER_THAN_ANSWER ? "kecil" : "besar";
 
   if (!IS_NUMBER_LOWER_THAN_ANSWER && !IS_NUMBER_GREATER_THAN_ANSWER) {
-    resultTxt.innerText = `SELAMAT!!! Jawaban anda benar! Yaitu ${comparator}. Refresh kembali browser untuk memainkannya lagi`;
+    resultTxt.innerText = `SELAMAT!!! Jawaban anda benar! Yaitu ${comparator}. Refresh kembali untuk mengulang permainan`;
     disableAllBtn(btnContainer);
     return true;
   }
 
   life -= 1;
-  resultTxt.innerText = `angka yang kamu masukan terlalu ${SMALL_AND_BIG}, kesempatan mu tinggal lagi ${life}`;
+  resultTxt.innerText = `angka anda terlalu ${SMALL_AND_BIG}, kesempatan mu tinggal lagi ${life}`;
 };
 
 const gameOver = (checkLifeFunc) => {
   if (checkLifeFunc(life)) {
-    resultTxt.innerText = `yahhh, sayang sekali kamu gagal! Jawaban yang benar adalah ${FIXED_NUMBER}. Refresh kembali browser untuk memainkannya lagi`;
+    resultTxt.innerText = `yahhh, sayang sekali kamu gagal! Jawaban yang benar adalah ${FIXED_NUMBER}. Refresh kembali untuk mengulang permainan`;
     disableAllBtn(btnContainer);
   }
 };
